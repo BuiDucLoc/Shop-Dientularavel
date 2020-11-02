@@ -1,0 +1,30 @@
+.alert-danger{
+	color: #a94442!important;
+    background-color: #f2dede!important;
+    border-color: #ebccd1!important;
+}
+#alert1{
+	text-align: center;
+	text-align: center;
+    padding: 5px;
+    margin-top: 5px;
+}
+.alert-successg{
+	color: #3c763d!important;
+    background-color: #dff0d8!important;
+    border-color: #d6e9c6!important;
+}
+.fa-thumbs-down{
+	color: red!important;
+    font-size: 1rem!important;
+}
+.fa-thumbs-up{
+	color: #21a118!important;
+    font-size: 1rem!important;
+}
+.error{
+	color: red;
+}
+.hi th{
+    text-align: center;
+}
