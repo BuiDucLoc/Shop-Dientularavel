@@ -51,7 +51,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Nội dung sản phẩm</label>
-                                <textarea rows ='5'type="text" class="form-control" name="noidung" id="exampleInputEmail1" placeholder="Mô tả danh mục"></textarea>
+                                <textarea rows ='5'type="text" class="form-control" name="noidung" id="text" placeholder="Mô tả danh mục"></textarea>
                             </div>
                             <div class="form-group" >
                                 <label for="exampleInputEmail1">Ảnh sản phẩm</label>

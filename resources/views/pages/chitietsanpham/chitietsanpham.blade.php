@@ -65,6 +65,8 @@
 				<p><b>Thương hiệu:</b> {{$value->thuonghieu_sp->thuonghieu_name}}</p>
 				<p><b>Danh mục:</b> {{$value->category_sp->category_name}}</p>
 				<a href=""><img src="{{ asset('public/frontend/image/share.png') }}" class="share img-responsive"  alt="" /></a>
+				<div class="fb-share-button" data-href="{{$url}}" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{$url}}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia sẻ</a></div>
+				<div class="fb-like" data-href="{{$url}}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="false"></div>
 			</div><!--/product-information-->
 		</div>
 	</div><!--/product-details-->
@@ -73,9 +75,9 @@
 	<div class="category-tab shop-details-tab"><!--category-tab-->
 		<div class="col-sm-12">
 			<ul class="nav nav-tabs">
-				<li class="active"><a href="#details" data-toggle="tab">Chi tiết</a></li>
+				<li class="active"><a href="#reviews" data-toggle="tab">Bình Luận & Đánh giá</a></li>
 				<li><a href="#companyprofile" data-toggle="tab">Hồ sơ công ty</a></li>
-				<li ><a href="#reviews" data-toggle="tab">Reviews (5)</a></li>
+				<li ><a href="#details" data-toggle="tab">Chi tiết</a></li>
 			</ul>
 		</div>
 		<div class="tab-content">
@@ -112,25 +114,7 @@
 			
 			<div class="tab-pane fade active in" id="reviews" >
 				<div class="col-sm-12">
-					<ul>
-						<li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
-						<li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
-						<li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li>
-					</ul>
-					<p>{{$value->sanpham_noidung}}</p>
-					<p><b>Write Your Review</b></p>
-					
-					<form action="#">
-						<span>
-							<input type="text" placeholder="Your Name"/>
-							<input type="email" placeholder="Email Address"/>
-						</span>
-						<textarea name="" ></textarea>
-						<b>Rating: </b> <img src="{{ asset('public/frontend/image/rating.png') }}" alt="" />
-						<button type="button" class="btn btn-default pull-right">
-							Submit
-						</button>
-					</form>
+					<div class="fb-comments" data-href="http://localhost/dientularavel/chi-tiet-san-pham/15" data-numposts="20" data-width=""></div>
 				</div>
 			</div>
 			
@@ -151,8 +135,10 @@
 						<div class="product-image-wrapper">
 							<div class="single-products">
 								<div class="productinfo text-center">
-									<div style="height: 271px"><img src="{{ asset('public/upload/'.$value1->sanpham_image) }}" alt="" /></div>
-									<h2>{{$value1->sanpham_gia}}</h2>
+									<div style="height: 271px">
+										<img src="{{ asset('public/upload/'.$value1->sanpham_image) }}" alt="" />
+									</div>
+									<h2>{{number_format($value1->sanpham_gia).'đ'}}</h2>
 									<p>{{$value1->sanpham_name}}</p>
 									<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
 								</div>

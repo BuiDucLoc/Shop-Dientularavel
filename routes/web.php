@@ -10,6 +10,7 @@ use App\Http\Controllers\Ajax_Controller;
 use App\Http\Controllers\Cart_Controller;
 use App\Http\Controllers\User_Controller;
 use App\Http\Controllers\Thanhtoan_Controller;
+use App\Http\Controllers\Mail_Controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -106,5 +107,9 @@ route::get('thanhtoantienmat',[Thanhtoan_Controller::class,'thanhtoantienmat']);
 //tìm kiếm sản phẩm
 route::post('timkiemsanpham',[Home_Controller::class,'timkiemsanpham']);
 
+//mail
+route::get('send-mail/{id}',[Mail_Controller::class,'send_mail']);
 
-
+//login-facbook
+Route::get('login-facebook',[User_Controller::class,'login_facebook']);
+Route::get('callback',[User_Controller::class,'callback_facebook']);

@@ -99,6 +99,11 @@
             @endforeach 
             <tr>
               <td colspan="4" style="color:red">Tổng Tiền:{{number_format($a)}}</td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <a style = "background: #FE980F;color: black"class="btn update left" href="{{url('send-mail/'.$value->order_orderdetail->id)}}">Xác nhận đơn hàng</a>
+              </td>
             </tr>             
             </tbody>
           </table>

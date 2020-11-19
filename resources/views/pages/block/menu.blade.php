@@ -3,18 +3,37 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    {{-- seo wwebsit hiển thị thông tin website theo từng trang --}}
+    <meta name="description" content="Từ 2/11 - 5/11, khách hàng mua Samsung Galaxy M51 được giảm ngay 1 triệu, trả góp 0% và tham gia thu cũ đổi mới">
+    <meta name="keywords" content="Galaxy M51, M51, Hotsale, minigame, Samsung Galaxy M51, minigame M51, hotsale m51"/>
+    <meta name="robots" content="INDEX,FOLLOW"/>
+    <link rel="canonical" href="http://localhost/dientularavel/"/>
     <meta name="author" content="">
+    <link rel="icon" type="image/x-icon" href=""/>
+    {{-- -end --}}
+
+
+    {{-- chia se len facbook nhưng thông tin dựa --}}
+    <meta property="og:image" content="Từ 2/11 - 5/11, khách hàng mua Samsung Galaxy M51 được giảm ngay 1 triệu, trả góp 0% và tham gia thu cũ đổi mới" />
+    <meta property="og:site_name" content="thiatv.com" />
+    <meta property="og:description" content="Từ 2/11 - 5/11, khách hàng mua Samsung Galaxy M51 được giảm ngay 1 triệu, trả góp 0% và tham gia thu cũ đổi mới" />
+    <meta property="og:title" content="Home | L-Dientularavel" />
+    <meta property="og:url" content="http://localhost/dientularavel/" />
+    <meta property="og:type" content="website" />
+    {{-- end --}}
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0" nonce="ALkClRlZ"></script>
+    
     <title>Home | L-Dientularavel</title>
     <link href="{{asset('public/frontend/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/font-awesome.min.css')}}" rel="stylesheet">
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> --}}
     <link href="{{asset('public/frontend/css/prettyPhoto.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/price-range.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/animate.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/main.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/responsive.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/customer.css')}}" rel="stylesheet">
+    
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -40,6 +59,7 @@
                             <ul class="nav nav-pills">
                                 <li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
                                 <li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+
                             </ul>
                         </div>
                     </div>

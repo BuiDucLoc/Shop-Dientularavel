@@ -96,7 +96,7 @@ class Sanpham_Controller extends Controller
 
     //index-layout
 
-    public function chitietsanpham($id){
+    public function chitietsanpham(Request $request, $id){
         $category = category_model::where('category_status',1)->orderby('id','desc')->get();
         $thuonghieu = thuonghieu_model::where('thuonghieu_status',1)->orderby('id','desc')->get();
         $detail_sanpham = sanpham_model::where('id',$id)->get();
@@ -104,8 +104,8 @@ class Sanpham_Controller extends Controller
             $cate = $value->category_id;
         }
         $splienquan = sanpham_model::where('category_id',$cate)->whereNotIn('id',[$id])->limit(3)->get();
-        
-        return view('pages.chitietsanpham.chitietsanpham')->with(['category'=>$category,'thuonghieu'=>$thuonghieu,'detail_sanpham'=>$detail_sanpham,'splienquan'=>$splienquan]);
+        $url = $request->url();
+        return view('pages.chitietsanpham.chitietsanpham')->with(['category'=>$category,'thuonghieu'=>$thuonghieu,'detail_sanpham'=>$detail_sanpham,'splienquan'=>$splienquan,'url'=>$url]);
     }
     public function sanpham(){
         $category = category_model::where('category_status',1)->orderby('id','desc')->get();

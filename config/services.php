@@ -29,5 +29,16 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+//facbook
+    'facebook' => [
+    'client_id' => '801060457415611', //client face của bạn
+    'client_secret' => '9d35cbe191b856d1526c724ee0eb8040', //client app service face của bạn
+    'redirect' => 'http://localhost/dientularavel/callback' //callback trả về
+ ],
+    // 'facebook' => [
+    //     'client_id' => env('801060457415611'),
+    //     'client_secret' => env('9d35cbe191b856d1526c724ee0eb8040'),
+    //     'redirect' => env('http://localhost/dientularavel/admin/callback'),
+    // ],
 
 ];

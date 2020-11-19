@@ -45,6 +45,7 @@
                 <th>Tên người đặt</th>
                 <th>Tình trạng</th>
                 <th>Tổng tiền</th>
+                <th>Ngày đặt</th>
                 <th style="width:30px;"></th>
               </tr>
             </thead>
@@ -54,7 +55,8 @@
                 <td><label class="i-checks m-b-none"><input type="checkbox"><i></i></label></td>
                 <td>{!! $value->shipping_order->shipping_name !!}</td>
                 <td><span class="text-ellipsis">{!!$value->order_trangthai !!}</span></td>
-                <td><span class="text-ellipsis">{!!$value->order_tongtien !!}</span></td>
+                <td><span class="text-ellipsis">{!!$value->order_tongtien.'đ'!!}</span></td>
+                <td><span class="text-ellipsis">{!!$value->created_at !!}</span></td>
                 <td>
                     <a href="{{url('admin/order/chitiet_donhang/'.$value->id)}}" ui-toggle-class="">
                       <i class="fa fa-pencil-square-o text-success text-active"></i>
