@@ -11,6 +11,9 @@ use App\Http\Controllers\Cart_Controller;
 use App\Http\Controllers\User_Controller;
 use App\Http\Controllers\Thanhtoan_Controller;
 use App\Http\Controllers\Mail_Controller;
+use App\Http\Controllers\Magiamgia_Controller;
+use App\Http\Controllers\Vanchuyen_Controller;
+use App\Http\Controllers\Tintuc_Controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -79,6 +82,25 @@ route::group(['prefix'=>'admin','middleware'=>'login'],function(){
 		route::get('delete_donhang/{id}',[Thanhtoan_Controller::class,'delete_donhang']);
 	});
 	route::get('order',[Thanhtoan_Controller::class,'order']);
+	//magiamgia
+	route::group(['prefix'=>'magiamgia'],function(){
+		route::get('them',[Magiamgia_Controller::class,'themmagiamgia']);
+		route::post('postmagiamgia',[Magiamgia_Controller::class,'postmagiamgia']);
+		route::get('sua/{n}',[Magiamgia_Controller::class,'suamagiamgia']);
+		route::post('postma/{n}',[Magiamgia_Controller::class,'postma']);
+		route::get('xoa/{n}',[Magiamgia_Controller::class,'xoa']);
+	});
+	route::get('magiamgia',[Magiamgia_Controller::class,'magiamgia']);
+	//phí vận chuyển
+	route::group(['prefix'=>'phivanchuyen'],function(){
+		
+	});
+	route::get('phivanchuyen',[Vanchuyen_Controller::class,'phivanchuyen']);
+	route::post('select_delivery',[Vanchuyen_Controller::class,'select_delivery']);
+	route::post('insert_delivery',[Vanchuyen_Controller::class,'insert_delivery']);
+	route::post('load_delivery',[Vanchuyen_Controller::class,'load_delivery']);
+	route::post('update_delivery',[Vanchuyen_Controller::class,'update_delivery']);
+
 });
 //index
 route::get('sanpham',[Sanpham_Controller::class,'sanpham']);
@@ -113,3 +135,29 @@ route::get('send-mail/{id}',[Mail_Controller::class,'send_mail']);
 //login-facbook
 Route::get('login-facebook',[User_Controller::class,'login_facebook']);
 Route::get('callback',[User_Controller::class,'callback_facebook']);
+//cart ajax
+Route::post('cart_ajax',[Cart_Controller::class,'cart_ajax']);
+Route::post('danhmuc_sanpham/cart_ajax1',[Cart_Controller::class,'cart_ajax']);
+Route::post('thuonghieu_sanpham/cart_ajax1',[Cart_Controller::class,'cart_ajax']);
+Route::post('sanpham/cart_ajax1',[Cart_Controller::class,'cart_ajax']);
+//giamgia
+route::post('check_giamgia',[Magiamgia_Controller::class,'check_giamgia']);
+route::post('delete_giamgia',[Magiamgia_Controller::class,'delete_giamgia']);
+
+//vận chuyển
+route::post('select_delivery',[Vanchuyen_Controller::class,'select_delivery']);
+route::post('show_feeship',[Thanhtoan_Controller::class,'show_feeship']);
+route::post('delete_vanchuyen',[Thanhtoan_Controller::class,'delete_vanchuyen']);
+
+//giohang1
+route::get('delete_giohang1/{id}',[Cart_Controller::class,'delete_giohang1']);
+route::get('delete_all1',[Cart_Controller::class,'delete_all1']);
+route::post('capnhap1',[Cart_Controller::class,'capnhap1']);
+
+//thanhtoan
+route::post('donhang',[Thanhtoan_Controller::class,'donhang']);
+
+//tintuc
+route::get('tintuc',[Tintuc_Controller::class,'tintuc']);
+route::get('baiviet',[Tintuc_Controller::class,'baiviet']);
+route::get('diachi',[Tintuc_Controller::class,'diachi']);

@@ -6,10 +6,18 @@
 	<title>Document</title>
 </head>
 <body>
+  @php
+      $a = 0;
+      foreach($order as $value1){
+      $mahd = $value1->order_code;
+    }
+
+            @endphp
 	<h3>Đơn hàng của bạn đã được xác nhận thành công!</h3>
 	<h3>Cảm ơn bạn quan tâm đến shop, chúc bạn có một ngày tốt lành ^^</h3>
 	<div class="table-agile-info">
       <div class="panel panel-default">
+         Mã hóa đơn({{$mahd}})
         <div class="panel-heading">
             CHI TIẾT ĐƠN HÀNG
         </div>
@@ -24,9 +32,7 @@
               </tr>
             </thead>
             <tbody>
-            @php
-              $a = 0;
-            @endphp
+            
             @foreach($dulieu as $value)
               <tr style="text-align: center">
                 <td>{!! $value->sanpham_orderdetail->sanpham_name !!}</td>
@@ -34,12 +40,19 @@
                 <td><span class="text-ellipsis">{!! number_format($value->detal_gia).'đ' !!}</span></td>
                 <td><span class="text-ellipsis">{!! number_format($value->detal_sl*$value->detal_gia).'đ' !!}</span></td>
               </tr>
-              @php
-                $a = $a + $value->detal_sl*$value->detal_gia;
-              @endphp
             @endforeach 
             <tr>
-              <td colspan="4" style="color:red">Tổng Tiền:{{number_format($a)}}</td>
+                @if($value1->fee_ship>0)
+                  <td colspan="1" style="color:red">Phí ship:{{number_format($value1->fee_ship)}}đ</td>
+                @else
+                  <td colspan="1" style="color:red">Phí ship:0.đ</td>
+                @endif
+
+                @if($value1->fee_giamgia>0)
+                  <td colspan="1" style="color:red">Mã giảm:{{number_format($value1->fee_giamgia)}}đ</td>
+                @else
+                @endif
+                <td colspan="2" style="color:red">Tổng Tiền:{{number_format($value1->order_tongtien)}}đ</td>
             </tr>
             <tr>
               <td colspan="4">

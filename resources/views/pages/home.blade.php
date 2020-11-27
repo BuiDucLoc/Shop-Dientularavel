@@ -4,19 +4,27 @@
     <h2 class="title text-center">Sản phẩm mới nhất</h2>
     
     @foreach($allsanpham as $value)
-    <a href="{{url('chi-tiet-san-pham/'.$value->id)}}">
+    
         <div class="col-sm-4">
             <div class="product-image-wrapper">
                 <div class="single-products">
                         <div class="productinfo text-center">
-                        
-                            <div style="height: 271px"><img src="{{url('public/upload/'.$value->sanpham_image)}}" alt="" /></div>
-                            <h2>{{number_format($value->sanpham_gia). 'đ'}}</h2>
-                            <p>{{$value->sanpham_name}}</p>
-                            <a href="{{url('them_gh/'.$value->id)}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                       
+                            <form>
+                                @csrf
+                                <input type="hidden" value="{{$value->id}}" class="product_id_{{$value->id}}">
+                                <input type="hidden" value="{{$value->sanpham_name}}" class="product_name_{{$value->id}}">
+                                <input type="hidden" value="{{$value->sanpham_gia}}" class="product_gia_{{$value->id}}">
+                                <input type="hidden" value="{{$value->sanpham_image}}" class="product_image_{{$value->id}}">
+                                <input type="hidden" value="1" class="soluong_{{$value->id}}">
+                                <a href="{{url('chi-tiet-san-pham/'.$value->id)}}">
+                                <div style="height: 271px"><img src="{{url('public/upload/'.$value->sanpham_image)}}" alt="" /></div>
+                                <h2>{{number_format($value->sanpham_gia). 'đ'}}</h2>
+                                <p>{{$value->sanpham_name}}</p>
+                                </a>
+                                {{-- <a href="{{url('them_gh/'.$value->id)}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a> --}}
+                                <button type="button" class="btn btn-default add-to-cart" data-id="{{$value->id}}" name="mua-hang"><i class="fa fa-shopping-cart"></i>Mua hàng</button>
+                            </form>
                         </div>
-                        
                 </div>
                 <div class="choose">
                     <ul class="nav nav-pills nav-justified">
@@ -26,7 +34,6 @@
                 </div>
             </div>
         </div>
-    </a>
     @endforeach
 </div><!--features_items-->
 

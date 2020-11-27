@@ -1,4 +1,4 @@
-@include('pages.block.menu')
+{{-- @include('pages.block.menu')
 <?php 
 	$dl = Cart::content();
 ?>
@@ -116,3 +116,4 @@
 		</div>
 	</section> <!--/#cart_items-->
 @include('pages.block.footer')
+ --}}

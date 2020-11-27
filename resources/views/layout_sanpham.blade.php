@@ -1,7 +1,7 @@
 <?php 
   use Carbon\Carbon;
 ?>
-    @include('pages.block.menu');
+    @include('pages.block.menu')
     
     <!-- <section id="slider">
         <div class="container">

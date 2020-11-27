@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class TblThanhtoan extends Migration
+class TblMagiamgia extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class TblThanhtoan extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_thanhtoan', function (Blueprint $table) {
+        Schema::create('tbl_magiamgia', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('thanhtoan_hinhthuc');
-            $table->string('thanhtoan_trangthai');
-            $table->timestamps();
+            $table->string('coupon_name');
+            $table->integer('coupon_sl');
+            $table->integer('coupon_condition');
+            $table->integer('coupon_number');
+            $table->string('coupon_code');
         });
     }
 
@@ -28,6 +30,6 @@ class TblThanhtoan extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_thanhtoan');
+        Schema::dropIfExists('tbl_magiamgia');
     }
 }

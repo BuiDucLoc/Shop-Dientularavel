@@ -37,27 +37,43 @@
           <table class="table table-striped b-t b-light">
             <thead>
               <tr>
-                <th>Mã hóa đơn</th>
-                <th>Tên người đặt</th>
-                <th>Tình trạng</th>
-                <th>Tổng tiền</th>
-                <th>Ngày đặt</th>
+                <th>Tên mã giảm giá</th>
+                <th>Mã giảm giá</th>
+                <th>Số lượng</th>
+                <th>Điều kiện</th>
+                <th>Số tiền giảm</th>
                 <th style="width:30px;"></th>
               </tr>
             </thead>
             <tbody>
           @foreach($data as $key => $value)
               <tr>
-                <td>{{$value->order_code}}</td>
-                <td>{!! $value->shipping_order->shipping_name !!}</td>
-                <td><span class="text-ellipsis">@if($value->order_trangthai==1) {{'Đơn hàng mới'}} @else {{'Đã xử lí'}} @endif</span></td>
-                <td><span class="text-ellipsis">{!!number_format($value->order_tongtien,0,',','.'). 'đ'!!}</span></td>
-                <td><span class="text-ellipsis">{!!$value->created_at !!}</span></td>
+                <td>{!! $value->coupon_name !!}</td>
+                <td>{!! $value->coupon_code !!}</td>
+                <td><span class="text-ellipsis">{!!$value->coupon_sl !!}</span></td>
                 <td>
-                    <a href="{{url('admin/order/chitiet_donhang/'.$value->id)}}" ui-toggle-class="">
-                      <i class="fa fa-eye text-success text-active"></i>
+                  <span class="text-ellipsis">
+                    @if ($value->coupon_condition==1)
+                      {{'Giảm giá theo phần trăm'}}
+                    @elseif($value->coupon_condition==2)
+                      {{'Giảm giá theo tiền mặt'}}
+                    @endif
+                  </span>
+                </td>
+                <td>
+                  <span class="text-ellipsis">
+                    @if ($value->coupon_condition==1)
+                      Giảm{{$value->coupon_number}}%
+                    @elseif($value->coupon_condition==2)
+                      Giảm{{number_format($value->coupon_number)}}đ
+                    @endif
+                  </span>
+                </td>
+                <td>
+                    <a href="{{url('admin/magiamgia/sua/'.$value->id)}}" ui-toggle-class="">
+                      <i class="fa fa-pencil-square-o text-success text-active"></i>
                     </a>
-                    <a href="{{url('admin/order/delete_donhang/'.$value->id)}}" onclick="return confirm('bạn có muốn xóa không?')" ui-toggle-class="">
+                    <a href="{{url('admin/magiamgia/xoa/'.$value->id)}}" onclick="return confirm('bạn có muốn xóa không?')" ui-toggle-class="">
                       <i class="fa fa-times text-danger text"></i>
                     </a>
                 </td>

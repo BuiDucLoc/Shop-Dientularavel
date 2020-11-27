@@ -14,6 +14,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 <link href="{{asset('public/admin/css/style.css')}}" rel='stylesheet' type='text/css' />
 <link href="{{asset('public/admin/css/style-responsive.css')}}" rel="stylesheet"/>
+<link href="{{asset('public/admin/css/sweetalert.css')}}" rel="stylesheet"/>
 <!-- font CSS -->
 {{-- <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'> --}}
 <!-- font-awesome icons -->
@@ -28,7 +29,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="{{asset('public/admin/js/raphael-min.js')}}"></script>
 <script src="{{asset('public/admin/js/morris.js')}}"></script>
 <script src="{{asset('public/admin/js/Customer.js')}}"></script>
-
+<script src="{{asset('public/admin/js/sweetalert.js')}}"></script>
 </head>
 <body>
 <section id="container">
@@ -133,6 +134,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <ul class="sub">
                         <li><a href="{{url('admin/sanpham')}}">Sản phẩm</a></li>
                         <li><a href="{{url('admin/sanpham/them')}}">Thêm sản phẩm</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class=" fa fa fa-th"></i>
+                        <span>Mã giảm giá</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="{{url('admin/magiamgia')}}">Mã giảm giá</a></li>
+                        <li><a href="{{url('admin/magiamgia/them')}}">Thêm mã giảm giá</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class=" fa fa fa-th"></i>
+                        <span>Vận chuyển</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="{{url('admin/phivanchuyen')}}">Phí vận chuyển</a></li>
                     </ul>
                 </li>
                 
@@ -260,6 +280,5 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script>
     CKEDITOR.replace('text');
 </script>
-	
 </body>
 </html>

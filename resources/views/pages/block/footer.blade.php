@@ -170,5 +170,10 @@
     <script src="{{asset('public/frontend/js/main.js')}}"></script>
     <script src="{{asset('public/frontend/js/customer.js')}}"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    {{-- //cart ajax --}}
+    <script src="{{asset('public/frontend/js/sweetalert.js')}}"></script>
+    {{-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> --}}
+    <link href="{{asset('public/frontend/css/sweetalert.css')}}" rel="stylesheet">
+    
 </body>
 </html>

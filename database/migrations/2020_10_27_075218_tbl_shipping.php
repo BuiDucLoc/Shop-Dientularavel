@@ -20,6 +20,7 @@ class TblShipping extends Migration
             $table->string('shipping_phone');
             $table->string('shipping_diachi');
             $table->string('shipping_ghichu');
+            $table->integer('shipping_method');
             $table->integer('customer_id')->unsigned();
             $table->foreign('customer_id')->references('id')->on('tbl_customers')->onDelete('cascade');
             $table->timestamps();

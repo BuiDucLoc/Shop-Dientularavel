@@ -62,7 +62,7 @@
                 <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
                 <td>{!! $value->sanpham_name !!}</td>
                 <td style="width: 14%"><img src="{{url('public/upload/'.$value->sanpham_image)}}" style="width: 50%"alt=""></td>
-                <td>{!! number_format($value->sanpham_gia) !!}</td>
+                <td>{!! number_format($value->sanpham_gia,0,',','.') !!}</td>
                 <td>{!! $value->category_sp->category_name !!}</td>
                 <td>{!! $value->thuonghieu_sp->thuonghieu_name !!}</td>
                 <td><span class="text-ellipsis">
