@@ -17,7 +17,7 @@ class TblXaphuongthitran extends Migration
             $table->string('xaid');
             $table->string('name_xaphuong');
             $table->string('type');
-            $table->int('maqh');
+            $table->integer('maqh');
         });
     }
 

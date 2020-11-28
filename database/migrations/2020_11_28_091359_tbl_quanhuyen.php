@@ -17,7 +17,7 @@ class TblQuanhuyen extends Migration
             $table->string('maqh');
             $table->string('name_quanhuyen');
             $table->string('type');
-            $table->int('matp');
+            $table->integer('matp');
         });
     }
 
