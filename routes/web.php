@@ -14,7 +14,7 @@ use App\Http\Controllers\Mail_Controller;
 use App\Http\Controllers\Magiamgia_Controller;
 use App\Http\Controllers\Vanchuyen_Controller;
 use App\Http\Controllers\Tintuc_Controller;
-use App\Http\Middleware\Login;
+use App\Http\Middleware\login;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,7 +33,8 @@ route::get('trangchu',[Home_Controller::class,'index']);
 route::get('login',[Admin_Controller::class,'index']);
 route::post('admin_dangnhap',[Admin_Controller::class,'dangnhap']);
 
-route::group(['prefix'=>'admin','middleware'=>'login'],function(){
+// route::group(['prefix'=>'admin','middleware'=>'login'],function(){
+route::group(['prefix'=>'admin'],function(){
 	route::get('dasboard',[Admin_Controller::class,'dasboard']);
 	route::get('admin_dangxuat',[Admin_Controller::class,'dangxuat']);
 	//category_admin
