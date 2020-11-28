@@ -7,6 +7,7 @@ use DB;
 use Auth;
 use Session;
 use App\Models\admin_model;
+use App\Http\Middleware\login;
 class Admin_Controller extends Controller
 {
    
