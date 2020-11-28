@@ -14,6 +14,7 @@ use App\Http\Controllers\Mail_Controller;
 use App\Http\Controllers\Magiamgia_Controller;
 use App\Http\Controllers\Vanchuyen_Controller;
 use App\Http\Controllers\Tintuc_Controller;
+use App\Http\Middleware\Login;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
