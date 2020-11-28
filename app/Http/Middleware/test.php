@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Session;
-class Login
+class test
 {
     /**
      * Handle an incoming request.
