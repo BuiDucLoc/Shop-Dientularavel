@@ -8,18 +8,18 @@ use App\Models\category_model;
 class Tintuc_Controller extends Controller
 {
     public function tintuc(){
-    	$danhmuc = category_model::orderby('id','desc')->get();
-     	$thuonghieu = thuonghieu_model::orderby('id','desc')->get();
-    	return view('pages.tintuc.tintuc',['category'=>$danhmuc,'thuonghieu'=>$thuonghieu]);
+    	$category = category_model::where('category_status',1)->orderby('id','desc')->get();
+        $thuonghieu = thuonghieu_model::where('thuonghieu_status',1)->orderby('id','desc')->get();
+    	return view('pages.tintuc.tintuc',['category'=>$category,'thuonghieu'=>$thuonghieu]);
     }
     public function baiviet(){
-    	$danhmuc = category_model::orderby('id','desc')->get();
-     	$thuonghieu = thuonghieu_model::orderby('id','desc')->get();
-    	return view('pages.baiviet.baiviet',['category'=>$danhmuc,'thuonghieu'=>$thuonghieu]);
+    	$category = category_model::where('category_status',1)->orderby('id','desc')->get();
+        $thuonghieu = thuonghieu_model::where('thuonghieu_status',1)->orderby('id','desc')->get();
+    	return view('pages.baiviet.baiviet',['category'=>$category,'thuonghieu'=>$thuonghieu]);
     }
     public function diachi(){
-    	$danhmuc = category_model::orderby('id','desc')->get();
-     	$thuonghieu = thuonghieu_model::orderby('id','desc')->get();
-    	return view('pages.diachi.diachi',['category'=>$danhmuc,'thuonghieu'=>$thuonghieu]);
+    	$category = category_model::where('category_status',1)->orderby('id','desc')->get();
+        $thuonghieu = thuonghieu_model::where('thuonghieu_status',1)->orderby('id','desc')->get();
+    	return view('pages.diachi.diachi',['category'=>$category,'thuonghieu'=>$thuonghieu]);
     }
 }
