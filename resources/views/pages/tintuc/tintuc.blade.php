@@ -5,7 +5,7 @@
 						<div class="single-blog-post">
 							<h3 style="color:red;">Điện thoại iPhone 12 Pro Max 512GB (Hàng sắp về, dự kiến giữa tháng 12/2020)</h3>
 							<a href="">
-								<img src="{{asset('public/frontend/image/IP12.jpg') }}" alt="">
+								<img src="{{asset('public/frontend/image/tin.jpg') }}" alt="">
 							</a>
 							<h2>
 								Điện thoại iPhone 12 - "Siêu phẩm" iPhone khẳng định đẳng cấp</h2> <br>
