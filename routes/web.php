@@ -32,7 +32,7 @@ route::get('trangchu',[Home_Controller::class,'index']);
 route::get('login',[Admin_Controller::class,'index']);
 route::post('admin_dangnhap',[Admin_Controller::class,'dangnhap']);
 
-route::group(['prefix'=>'admin','middleware'=>['login']],function(){
+route::group(['prefix'=>'admin','middleware'=>'a'],function(){
 // route::group(['prefix'=>'admin'],function(){
 	route::get('dasboard',[Admin_Controller::class,'dasboard']);
 	route::get('admin_dangxuat',[Admin_Controller::class,'dangxuat']);
