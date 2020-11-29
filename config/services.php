@@ -33,7 +33,7 @@ return [
     'facebook' => [
     'client_id' => '801060457415611', //client face của bạn
     'client_secret' => '9d35cbe191b856d1526c724ee0eb8040', //client app service face của bạn
-    'redirect' => 'http://localhost/dientularavel/callback' //callback trả về
+    'redirect' => 'https://dientularavel.herokuapp.com/callback' //callback trả về
  ],
     // 'facebook' => [
     //     'client_id' => env('801060457415611'),
