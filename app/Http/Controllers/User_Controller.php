@@ -56,7 +56,7 @@ class User_Controller extends Controller
          return Socialite::driver('facebook')->redirect();
          }
 
-    public function callback(){
+    public function callback_facebook(){
         $provider = Socialite::driver('facebook')->user();
         $check = social_model::where('provider_user_id',$provider->getId())->first();
         // $account = social_model::where('provider_user_id',$provider->getId())->first();

@@ -135,7 +135,7 @@ route::get('send-mail/{id}',[Mail_Controller::class,'send_mail']);
 
 //login-facbook
 Route::get('login-facebook',[User_Controller::class,'login_facebook']);
-Route::get('callback',[User_Controller::class,'callback']);
+Route::get('callback',[User_Controller::class,'callback_facebook']);
 //cart ajax
 Route::post('cart_ajax',[Cart_Controller::class,'cart_ajax']);
 Route::post('danhmuc_sanpham/cart_ajax1',[Cart_Controller::class,'cart_ajax']);
