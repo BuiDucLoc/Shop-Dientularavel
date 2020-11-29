@@ -53,7 +53,7 @@ class User_Controller extends Controller
     }
 
     public function login_facebook(){
-         return Socialite::driver('facebook')->redirect();
+         return Socialite::driver('facebook')->redirect('callback');
          }
 
     public function callback_facebook(){
