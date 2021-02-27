@@ -16,7 +16,7 @@ class test
      */
     public function handle(Request $request, Closure $next)
     {   
-        if(Session::get('admin_name')){
+        if(Session::get('admin_id')){
             return $next($request);
         }
             

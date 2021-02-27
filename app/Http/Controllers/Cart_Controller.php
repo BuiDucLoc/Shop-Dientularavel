@@ -138,7 +138,7 @@ class Cart_Controller extends Controller
                 'qty'=>$data['car_product_sl'],
             );
         }
-            Session::put('cart',$cart);          
+            Session::put('cart',$cart); 
     }
 
     public function giohang(){

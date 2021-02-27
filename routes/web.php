@@ -31,8 +31,8 @@ route::get('trangchu',[Home_Controller::class,'index']);
 //admin
 route::get('login',[Admin_Controller::class,'index']);
 route::post('admin_dangnhap',[Admin_Controller::class,'dangnhap']);
-
-route::group(['prefix'=>'admin','middleware'=>'a'],function(){
+//them sau admin : ,'middleware'=>'a'
+route::group(['prefix'=>'admin'],function(){
 // route::group(['prefix'=>'admin'],function(){
 	route::get('dasboard',[Admin_Controller::class,'dasboard']);
 	route::get('admin_dangxuat',[Admin_Controller::class,'dangxuat']);
@@ -162,3 +162,6 @@ route::post('donhang',[Thanhtoan_Controller::class,'donhang']);
 route::get('tintuc',[Tintuc_Controller::class,'tintuc']);
 route::get('baiviet',[Tintuc_Controller::class,'baiviet']);
 route::get('diachi',[Tintuc_Controller::class,'diachi']);
+
+
+

@@ -18,8 +18,9 @@ $(document).ready(function(){
 			method:'POST',
 			data:{car_product_id:car_product_id,car_product_name:car_product_name,car_product_gia:car_product_gia,car_product_image:car_product_image,car_product_sl:car_product_sl,_token:_token},
 			success:function(data){
-				swal("Mua thành công!", "", "success");
-				location.reload();
+				// swal("Mua thành công!", "", "success");
+				// location.reload();
+				alert(data);
 			}
 		});
 	});

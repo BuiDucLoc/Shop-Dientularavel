@@ -1,7 +1,7 @@
 @extends('layout_cart')
 @section('trangchu')
 <?php 
-	$dl = Session::get('cart');
+	$dl = Session::get('cart1');
 ?>
 	<section id="cart_items">
 		{{-- <div class="container"> --}}

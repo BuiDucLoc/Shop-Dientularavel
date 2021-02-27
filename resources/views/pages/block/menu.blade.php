@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name = "csrf-token" content = "{{csrf_token ()}}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{-- seo wwebsit hiển thị thông tin website theo từng trang --}}
@@ -57,8 +58,8 @@
                     <div class="col-sm-6">
                         <div class="contactinfo">
                             <ul class="nav nav-pills">
-                                <li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i> 0123456789</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i> loc@gmail.com</a></li>
 
                             </ul>
                         </div>

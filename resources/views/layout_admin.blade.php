@@ -67,7 +67,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <img alt="" src="{{url('public/upload/loc.jpg')}}">
-                <span class="username">{{Session::get('admin_name')}}</span>
+                <span class="username">{{Session::get('admin_name')}} </span>
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu extended logout">
