@@ -99,3 +99,33 @@
     width: 70px;
     border-radius: 7px;
 }
+.fb{
+    font-size: 2rem!important;
+    background: #f5f5f5!important;
+    background-color: white!important;
+    color: blue!important;
+}
+.btn{
+    font-size: 16px!important;
+}
+.update1{
+    background: #FE980F;
+    border-radius: 0;
+    color: #FFFFFF;
+    border: none;
+    padding: 5px 15px;
+    margin-left: 30px;
+}
+.commnets{
+    margin-bottom: 25px!important;
+}
+.media-heading{
+    font-size: 18px!important;
+}
+.commnets p{
+    font-size: 13px!important;
+}
+.media-heading:hover{
+    color: blue;
+    animation-delay: 2s;
+}

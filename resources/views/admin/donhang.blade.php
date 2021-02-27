@@ -37,27 +37,25 @@
           <table class="table table-striped b-t b-light">
             <thead>
               <tr>
-                <th style="width:20px;">
-                  <label class="i-checks m-b-none">
-                    <input type="checkbox"><i></i>
-                  </label>
-                </th>
+                <th>Mã hóa đơn</th>
                 <th>Tên người đặt</th>
                 <th>Tình trạng</th>
                 <th>Tổng tiền</th>
+                <th>Ngày đặt</th>
                 <th style="width:30px;"></th>
               </tr>
             </thead>
             <tbody>
           @foreach($data as $key => $value)
               <tr>
-                <td><label class="i-checks m-b-none"><input type="checkbox"><i></i></label></td>
+                <td>{{$value->order_code}}</td>
                 <td>{!! $value->shipping_order->shipping_name !!}</td>
-                <td><span class="text-ellipsis">{!!$value->order_trangthai !!}</span></td>
-                <td><span class="text-ellipsis">{!!$value->order_tongtien !!}</span></td>
+                <td><span class="text-ellipsis">@if($value->order_trangthai==1) {{'Đơn hàng mới'}} @else {{'Đã xử lí'}} @endif</span></td>
+                <td><span class="text-ellipsis">{!!number_format($value->order_tongtien,0,',','.'). 'đ'!!}</span></td>
+                <td><span class="text-ellipsis">{!!$value->created_at !!}</span></td>
                 <td>
                     <a href="{{url('admin/order/chitiet_donhang/'.$value->id)}}" ui-toggle-class="">
-                      <i class="fa fa-pencil-square-o text-success text-active"></i>
+                      <i class="fa fa-eye text-success text-active"></i>
                     </a>
                     <a href="{{url('admin/order/delete_donhang/'.$value->id)}}" onclick="return confirm('bạn có muốn xóa không?')" ui-toggle-class="">
                       <i class="fa fa-times text-danger text"></i>

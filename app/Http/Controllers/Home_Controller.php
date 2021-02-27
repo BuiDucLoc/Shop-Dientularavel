@@ -9,7 +9,8 @@ use App\Models\sanpham_model;
 class Home_Controller extends Controller
 {	
 	//trangchu
- 	public function index(){
+ 	public function index(Request $request){
+ 		
  		$category = category_model::where('category_status',1)->orderby('id','desc')->get();
  		$thuonghieu = thuonghieu_model::where('thuonghieu_status',1)->orderby('id','desc')->get();
  		$allsanpham = sanpham_model::where('sanpham_status',1)->orderby('id','desc')->limit(6)->get();

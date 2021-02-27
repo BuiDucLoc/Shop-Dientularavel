@@ -9,7 +9,7 @@ class order_detail_model extends Model
 {
     protected $table = 'tbl_order_detal';
 	protected $primaryKey = 'id';
-	protected $fillable = ['detal_sl','detal_gia','order_id','sanpham_id'];
+	protected $fillable = ['detal_sl','detal_gia','order_id','sanpham_id','detal_coupon','detal_feeship'];
 	public function order_orderdetail(){
 		return $this->belongsTo('App\Models\order_model','order_id');
 	}

@@ -21,6 +21,9 @@ class TblOrderDetail extends Migration
             $table->foreign('order_id')->references('id')->on('tbl_order')->onDelete('cascade');
             $table->integer('sanpham_id')->unsigned();
             $table->foreign('sanpham_id')->references('id')->on('tbl_sanpham')->onDelete('cascade');
+            $table->string('detal_coupon');
+            $table->string('detal_feeship');
+            $table->integer('detal_method');
             $table->timestamps();
         });
     }

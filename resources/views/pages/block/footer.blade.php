@@ -129,6 +129,14 @@
                     <div class="col-sm-3 col-sm-offset-1">
                         <div class="single-widget">
                             <h2>About Shopper</h2>
+
+                            <div class="fb" style="padding: 5px">
+                                <div class="fb-share-button" data-href="http://localhost/dientularavel/" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost/dientularavel/&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia sẻ</a></div>
+                            </div>
+                            <div class="fb1"style="padding: 5px">
+                                <div class="fb-like" data-href="http://localhost/dientularavel/" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="false"></div>
+                            </div>
+                            <br>
                             <form action="#" class="searchform">
                                 <input type="text" placeholder="Your email address" />
                                 <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
@@ -161,5 +169,11 @@
     <script src="{{asset('public/frontend/js/jquery.prettyPhoto.js')}}"></script>
     <script src="{{asset('public/frontend/js/main.js')}}"></script>
     <script src="{{asset('public/frontend/js/customer.js')}}"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    {{-- //cart ajax --}}
+    <script src="{{asset('public/frontend/js/sweetalert.js')}}"></script>
+    {{-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> --}}
+    <link href="{{asset('public/frontend/css/sweetalert.css')}}" rel="stylesheet">
+    
 </body>
 </html>

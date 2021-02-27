@@ -19,8 +19,10 @@ class TblOrder extends Migration
             $table->string('order_trangthai');
             $table->integer('shipping_id')->unsigned();
             $table->foreign('shipping_id')->references('id')->on('tbl_shipping')->onDelete('cascade');
-            $table->integer('thanhtoan_id')->unsigned();
-            $table->foreign('thanhtoan_id')->references('id')->on('tbl_thanhtoan')->onDelete('cascade');
+            $table->string('order_code');
+            $table->integer('customer_id');
+            $table->integer('fee_ship');
+            $table->integer('fee_giamgia');
             $table->timestamps();
         });
     }

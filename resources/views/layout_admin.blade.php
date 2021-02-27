@@ -8,12 +8,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
 <link rel="stylesheet" href="{{asset('public/admin/css/bootstrap.min.css')}}">
-<link rel="stylesheet" href="{{asset('public/admin/css/Customer.css')}}">
+<link rel="stylesheet" href="{{asset('public/admin/css/customer.css')}}">
 <!-- //bootstrap-css -->
 <!-- Custom CSS -->
 <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 <link href="{{asset('public/admin/css/style.css')}}" rel='stylesheet' type='text/css' />
 <link href="{{asset('public/admin/css/style-responsive.css')}}" rel="stylesheet"/>
+<link href="{{asset('public/admin/css/sweetalert.css')}}" rel="stylesheet"/>
 <!-- font CSS -->
 {{-- <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'> --}}
 <!-- font-awesome icons -->
@@ -27,7 +28,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="{{asset('public/admin/js/jquery2.0.3.min.js')}}"></script>
 <script src="{{asset('public/admin/js/raphael-min.js')}}"></script>
 <script src="{{asset('public/admin/js/morris.js')}}"></script>
-<script src="{{asset('public/admin/js/Customer.js')}}"></script>
+<script src="{{asset('public/admin/js/customer.js')}}"></script>
+<script src="{{asset('public/admin/js/sweetalert.js')}}"></script>
 </head>
 <body>
 <section id="container">
@@ -65,7 +67,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <img alt="" src="{{url('public/upload/loc.jpg')}}">
-                <span class="username">{{Session::get('admin_name')}}</span>
+                <span class="username">{{Session::get('admin_name')}} </span>
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu extended logout">
@@ -132,6 +134,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <ul class="sub">
                         <li><a href="{{url('admin/sanpham')}}">Sản phẩm</a></li>
                         <li><a href="{{url('admin/sanpham/them')}}">Thêm sản phẩm</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class=" fa fa fa-th"></i>
+                        <span>Mã giảm giá</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="{{url('admin/magiamgia')}}">Mã giảm giá</a></li>
+                        <li><a href="{{url('admin/magiamgia/them')}}">Thêm mã giảm giá</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class=" fa fa fa-th"></i>
+                        <span>Vận chuyển</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="{{url('admin/phivanchuyen')}}">Phí vận chuyển</a></li>
                     </ul>
                 </li>
                 
@@ -255,6 +276,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //calendar -->
 
 	<!-- jQuery library -->
-	
+<script src="//cdn.ckeditor.com/4.15.0/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('text');
+</script>
 </body>
 </html>

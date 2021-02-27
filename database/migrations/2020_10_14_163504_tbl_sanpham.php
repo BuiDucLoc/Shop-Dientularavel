@@ -25,7 +25,7 @@ class TblSanpham extends Migration
             $table->string('sanpham_gia');
             $table->string('sanpham_image');
             $table->integer('sanpham_status');
-            $table->interger('soluong');
+            // $table->integer('soluong');
             $table->timestamps();
         });
     }
