@@ -163,5 +163,14 @@ route::get('tintuc',[Tintuc_Controller::class,'tintuc']);
 route::get('baiviet',[Tintuc_Controller::class,'baiviet']);
 route::get('diachi',[Tintuc_Controller::class,'diachi']);
 
+route::get('session',function(){
+	Session::put('id','1');
+	Session::put('name','buiducloc');
+	echo Session::get('id');
+	echo Session::get('name');
+});
+route::get('getsession',function(){
+	echo Session::get('name');
+});
 
 

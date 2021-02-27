@@ -11,7 +11,7 @@ use App\Models\feeship_model;
 use App\Models\thanhpho_model;
 use App\Models\quanpro_model;
 use App\Models\phuongwar_model;
-use Session;
+use Illuminate\Support\Facades\Session;
 use Cart;
 class Cart_Controller extends Controller
 {
